@@ -18,7 +18,7 @@ namespace DelegateWinformsDemo.Models
             return $"{FirstName} {LastName} - {Age} years old";
         }
 
-        public string ToString(PersonFormat format)
+        public string ToString(Func<Person, string> format)
         {
             if (format != null)
             {

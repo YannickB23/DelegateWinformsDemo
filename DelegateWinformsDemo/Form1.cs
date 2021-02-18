@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace DelegateWinformsDemo
 {
-    public delegate string PersonFormat(Person input);
+    //public delegate string PersonFormat(Person input);
     public partial class Form1 : Form
     {
-        PersonFormat proc;
+        Func<Person, string> proc;
         public Form1()
         {
             InitializeComponent();
@@ -53,7 +53,7 @@ namespace DelegateWinformsDemo
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            lstPerson.DataSource = null;
+            //lstPerson.DataSource = null;
             lstPerson.Items.Clear();
 
             foreach (Person person in People.GetPeople())
